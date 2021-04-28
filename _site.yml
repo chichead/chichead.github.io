@@ -1,7 +1,13 @@
 name: "chichead"
 title: "Chic Hen Run"
+theme: style.css
 description: |
   My Blog
+collections:
+  posts:
+    categories: false
+    categories_metadata: true
+    authors_metadata: false
 output_dir: "docs"
 navbar:
   right:

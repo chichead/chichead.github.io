@@ -1,19 +1,22 @@
 [
   {
     "path": "posts/2021-04-23-reticulate-python-and-r/",
-    "title": "reticulate-python-and-r",
-    "description": "A short description of the post.",
+    "title": "연습장",
+    "description": "블로그를 연습해봅니다.",
     "author": [
       {
-        "name": "administrator",
+        "name": "chic-head",
         "url": {}
       }
     ],
     "date": "2021-04-23",
-    "categories": [],
-    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "categories": [
+      "R_package",
+      "movie"
+    ],
+    "contents": "\r\nDistill is a publication format for scientific and technical writing, native to the web.\r\nLearn more about using Distill at https://rstudio.github.io/distill.\r\n중국 현지에 외주 제작사 비앤아르(B&R)를 설립하여 제영재, 이병혁, 김남호PD인 후배PD와 함께 를 시작으로 총수익 800억원, 순수익 200억원을 벌어들이며 큰 성공을 거뒀다. 관찰 예능이 흐름을 타며 중국 예능의 판을 바꾸기도 했다. 또한 미가미디어라는 회사를 중국에 설립하기도 했는데, ‘미가’의 뜻은 다름아닌 쌀집.(米家) 하지만, 2016년 11월 갑작스레 불어닥친 ’한한령’(한류제한령)을 피해갈 순 없었다. 그는 이제 3년여 동안의 중국 경험을 바탕으로 새로운 한중합작시스템을 모색 중이다.\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2021-04-23T15:39:15+09:00",
+    "last_modified": "2021-04-28T18:16:03+09:00",
     "input_file": {}
   },
   {
@@ -28,9 +31,9 @@
     ],
     "date": "2021-04-23",
     "categories": [],
-    "contents": "\n\n\n\n",
+    "contents": "\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2021-04-23T15:32:50+09:00",
+    "last_modified": "2021-04-27T09:29:26+09:00",
     "input_file": {}
   }
 ]
