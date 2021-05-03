@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://chichead.github.io/sitemap.xml
