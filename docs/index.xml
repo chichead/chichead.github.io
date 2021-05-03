@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Chic Hen Run</title>
+    <link>https://chichead.github.io/</link>
+    <atom:link href="https://chichead.github.io/index.xml" rel="self" type="application/rss+xml"/>
+    <description>My Blog
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Sun, 02 May 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>tibble package</title>
+      <dc:creator>chichead</dc:creator>
+      <link>https://chichead.github.io/posts/tibble_package</link>
+      <description>R아두면 쓸데있는 패키지 이야기 : 데이터 테이블의 진화</description>
+      <category>R_package</category>
+      <guid>https://chichead.github.io/posts/tibble_package</guid>
+      <pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Welcome to My Blog</title>
+      <dc:creator>Nora Jones</dc:creator>
+      <link>https://chichead.github.io/posts/welcome</link>
+      <description>Welcome to our new blog, My Blog. We hope you enjoy 
+reading what we have to say!</description>
+      <guid>https://chichead.github.io/posts/welcome</guid>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

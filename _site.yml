@@ -10,6 +10,7 @@ collections:
     authors_metadata: false
 output_dir: "docs"
 google_analytics: "G-YZCBLF5F53"
+base_url: https://chichead.github.io/
 navbar:
   right:
     - text: "Home"

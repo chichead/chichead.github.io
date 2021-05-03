@@ -4,15 +4,15 @@
       "path": "about.html",
       "title": "About Blog",
       "author": [],
-      "contents": "\r\nChic·Head\r\n\r\nnoun /ʃikːhed/\r\n1. birdbrain, a stupid person\r\n2. chicbrain, a tidy person\r\nWho Are You\r\n깔끔한 길을 찾는 답:대가리\r\n를 꿈꾸는 닭:대가리여요\r\n회사에선 데이터 분석을 하고, 글을 쓰고\r\n밖에서는 영화를 보고, 음악을 들어요\r\n집에서는 게임을 많이 합니다\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-05-03T02:47:16+09:00"
+      "contents": "\nChic·Head\n\nnoun /ʃikːhed/\n1. birdbrain, a stupid person\n2. chicbrain, a tidy person\nWho Are You\n깔끔한 길을 찾는 답:대가리\n를 꿈꾸는 닭:대가리여요\n회사에선 데이터 분석을 하고, 글을 쓰고\n밖에서는 영화를 보고, 음악을 들어요\n집에서는 게임을 많이 합니다\n\n\n\n",
+      "last_modified": "2021-05-03T13:28:10+09:00"
     },
     {
       "path": "index.html",
       "title": "My Blog",
       "author": [],
-      "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-05-03T02:47:17+09:00"
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-05-03T13:28:11+09:00"
     }
   ],
   "collections": ["posts/posts.json"]
