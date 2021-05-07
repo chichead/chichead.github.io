@@ -116,7 +116,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["tibble-package.html","tibble-package_files/anchor-4.2.2/anchor.min.js","tibble-package_files/bowser-1.9.3/bowser.min.js","tibble-package_files/distill-2.2.21/template.v2.js","tibble-package_files/header-attrs-2.7/header-attrs.js","tibble-package_files/jquery-1.11.3/jquery.min.js","tibble-package_files/popper-2.6.0/popper.min.js","tibble-package_files/tippy-6.2.7/tippy-bundle.umd.min.js","tibble-package_files/tippy-6.2.7/tippy-light-border.css","tibble-package_files/tippy-6.2.7/tippy.css","tibble-package_files/tippy-6.2.7/tippy.umd.min.js","tibble-package_files/webcomponents-2.0.0/webcomponents.js","tibble package/anchor-4.2.2/anchor.min.js","tibble package/bowser-1.9.3/bowser.min.js","tibble package/distill-2.2.21/template.v2.js","tibble package/header-attrs-2.7/header-attrs.js","tibble package/jquery-1.11.3/jquery.min.js","tibble package/popper-2.6.0/popper.min.js","tibble package/tippy-6.2.7/tippy-bundle.umd.min.js","tibble package/tippy-6.2.7/tippy-light-border.css","tibble package/tippy-6.2.7/tippy.css","tibble package/tippy-6.2.7/tippy.umd.min.js","tibble package/webcomponents-2.0.0/webcomponents.js","tibble_logo.png","tribble.gif"]}
+  {"type":"character","attributes":{},"value":["tibble_logo.png","tibble_package_files/anchor-4.2.2/anchor.min.js","tibble_package_files/bowser-1.9.3/bowser.min.js","tibble_package_files/distill-2.2.21/template.v2.js","tibble_package_files/header-attrs-2.7/header-attrs.js","tibble_package_files/jquery-1.11.3/jquery.min.js","tibble_package_files/popper-2.6.0/popper.min.js","tibble_package_files/tippy-6.2.7/tippy-bundle.umd.min.js","tibble_package_files/tippy-6.2.7/tippy-light-border.css","tibble_package_files/tippy-6.2.7/tippy.css","tibble_package_files/tippy-6.2.7/tippy.umd.min.js","tibble_package_files/webcomponents-2.0.0/webcomponents.js","tribble.gif"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1455,7 +1455,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"tibble package","description":"R아두면 쓸데있는 패키지 이야기 : 데이터 테이블의 진화","authors":[{"author":"chichead","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-05-02T00:00:00.000+09:00","citationText":"chichead, 2021"}
+{"title":"tibble package","description":"R아두면 쓸데있는 패키지 이야기 : 데이터 테이블의 진화","authors":[{"author":"chichead","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-05-02T00:00:00.000+00:00","citationText":"chichead, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1490,7 +1490,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><a href="#tibbles-name">Tibble’s Name</a></li>
 <li><a href="#tibbles-logo">Tibble’s Logo</a></li>
 </ul></li>
-<li><a href="#all-about-tibble">All about tibble</a></li>
+<li><a href="#all-about-tibble">All about tibble</a>
+<ul>
+<li><a href="#as.tibble">as.tibble</a></li>
+<li><a href="#tibble">tibble</a></li>
+<li><a href="#tribble">tribble</a></li>
+<li><a href="#tibble_row">tibble_row</a></li>
+</ul></li>
 </ul>
 </nav>
 </div>
@@ -1503,9 +1509,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>위대한 패키지 tidyverse의 일원인만큼 tibble 로고의 뒷 배경은 tidyverse 세계관을 공유하고 있어요. 우주 배경을 뒤에 두고 표가 그려져있지요. 그 위엔 TIBBLE 이라는 이름표가 적혀있고요. 폰트 스타일은 스타트랙을 닮았는데, 스타트랙에는 tibble과 유사한 tribble이라는 크리쳐가 등장하여요. tribble은 tibble 패키지의 함수로도 등장하는데 이건 뒤에서 설명 드릴거에요. tibble 이름표를 잘 보면 TI33으로도 읽을 수 있는데 공학용 계산기로 유명한 텍사스 인스트루먼트(TI)에서 만든 동명의 모델이 있다고하여요. (물론 의도한지는 모르겠지만요)</p>
 <p><br/></p>
 <h2 id="all-about-tibble">All about tibble</h2>
-<ul>
-<li><code>as.tibble</code></li>
-</ul>
+<h3 id="as.tibble">as.tibble</h3>
 <p>아이리스(붓꽃) 데이터가 담겨있는 iris 데이터를 가지고 살펴보아요. 총 150개의 로(row)와 5개의 칼럼(column)으로 이뤄진 데이터프레임(data.frame)이여요. 만일 코드에 그냥 iris라고 입력한다면 콘솔창에는 150개의 행을 보실 수 있을텐데요. 그걸 막기 위해 iris 데이터의 머릿부분만 불러오라는 함수 head( )를 써보았어요.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(iris)</span></code></pre></div>
 <div class="layout-chunk" data-layout="l-body">
@@ -1536,7 +1540,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
  8          5           3.4          1.5         0.2 setosa 
  9          4.4         2.9          1.4         0.2 setosa 
 10          4.9         3.1          1.5         0.1 setosa 
-# ... with 140 more rows</code></pre>
+# … with 140 more rows</code></pre>
 </div>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 행이 n개를 넘어가면 m개만 출력해주렴</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># options(tibble.print_max = n, tibble.print_min = m)</span></span>
@@ -1547,9 +1551,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 콘솔창의 폭은 고려말고 모든 열을 다 보여주렴</span></span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># option(tibble.width = Inf)</span></span></code></pre></div>
 <p><br/></p>
-<ul>
-<li><code>tibble</code></li>
-</ul>
+<h3 id="tibble">tibble</h3>
 <p>본격적으로 tibble을 만들어보아요. tibble( )을 이용하면 후딱 tibble을 생성할 수 있답니다. tibble( ) 함수는 data.frame( ) 함수와는 다르게 변수의 이름을 바꾸지 않아요. 예를 들어볼게요. <strong>닭 대가리</strong>라는 칼럼에 숫자 1을 넣은 data.frame을 만들어볼거에요. 동일하게 tibble로도 만들어보고요.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 닭 대가리라는 칼럼을 가진 데이터를 만들어보아요</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(<span class="st">`</span><span class="at">닭 대가리</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">1</span>)</span>
@@ -1577,9 +1579,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 1 smile space number</code></pre>
 </div>
 <p><br/></p>
-<ul>
-<li><code>tribble</code></li>
-</ul>
+<h3 id="tribble">tribble</h3>
 <p><img src="tribble.gif" style="width:40.0%" /></p>
 <p>tibble을 만들 수 있는 또다른 방법은 함수 tribble을 사용하는거여요. 커크 함장에게 눈처럼 내리는 동물이 바로 트리블이랍니다. 트리블은 복실복실한 털과 귀여운 목소리 탓에 애완용으로 많이 키워졌는데 다만 한가지 주의해야할 부분은 바로 번식이랍니다. 한 번 번식을 시작하면 끝도 없이 증식해버려서 자칫하면 손을 쓸 수 없을지도 몰라요</p>
 <p>tibble 패키지에 있는 tribble은 <strong>tr</strong>ansposed t<strong>ibble</strong>의 줄임말이여요. 단어 그대로 전치된 티블이라는 뜻이지요. 기존의 tibble 입력 형식이 colname = data 같은 가로형이었다면 tribble에서는 세로형으로 입력할 수 있지요. 간단하게 적은 양의 데이터를 코드로 입력할 때에는 tribble을 쓰면 편리하답니다.</p>
@@ -1597,7 +1597,41 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 1 a        21 2000 
 2 b        31 1990 </code></pre>
 </div>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p><br/></p>
+<h3 id="tibble_row">tibble_row</h3>
+<p>tibble을 만들 수 있는 또 다른 방법. tibble_row( )가 있어요. 기본적으로 data.frame과 tibble은 벡터들의 모음이여요. 여기서 잠깐, 벡터는 동일한 유형의 데이터가 여러개 묶여있는 형식을 뜻해요. 수치형 벡터도 있을 테고, 문자형 벡터도 있을 거고요, 논리형 벡터도 존재해요. 함수 등과 같이 특별한 타입의 데이터들은 벡터가 아니여요. class를 가지고 있는 일부 요소들은 벡터이기도 하고 아닌 녀석도 있지요. (벡터는 깊이 들어가면 복잡해질 수 있으니 tibble package에서는 요정도만 다루어보아요.)</p>
+<p>tibble_row 이야기를 하는데 갑자기 벡터 이야기를 해서 뜬금없다고 생각할 수 있지만 다 이유가 있답니다. 기존 함수들로는 벡터가 아닌 데이터(스칼라)를 tibble 안에 담을 수 없었어요. 하지만 tibble_row 함수와 함께라면 스칼라도 tibble 안에 넣을 수 있어지. tibble_row 함수는 한 행(row)을 차지하는 데이터프레임을 구성해주어요. 즉 한 열에 크기가 1인 녀석만 들어갈 수 있지만 그 대신 스칼라 데이터도 넣을 수 있게 된 거지요. 참고로 저장되는 스칼라는 list 형태로 포장되어요.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># vector가 아닌 scalar 데이터를 만들어보아요</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># lm(linear model)과 time 데이터를 써 볼게요</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x, <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">y =</span> <span class="dv">3</span><span class="sc">:</span><span class="dv">7</span>), <span class="at">model =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(model)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 에러: All columns in a tibble must be vectors.</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co"># x Column `model` is a `lm` object.</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(time)</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="co">#  A tibble: 1 x 1</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="co">#  time               </span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="co">#  &lt;dttm&gt;             </span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 2021-05-06 23:41:31</span></span></code></pre></div>
+<p>model의 경우 vector가 아니여서 tibble에 담기지 않아요. 반면 time 데이터는 들어가네요. 하지만 tibble_row 함수가 출동한다면 어떨까요. 티-블-로. tibble_row와 함께라면 vector와 scalar 상관없이 tibble에 담을 수 있어요.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble_row</span>(model)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co">#  A tibble: 1 x 1</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co">#  model </span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co">#  &lt;list&gt;</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 &lt;lm&gt;  </span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble_row</span>(time)</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="co">#  A tibble: 1 x 1</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co">#  time               </span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="co">#  &lt;dttm&gt;             </span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 2021-05-06 23:41:31</span></span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

@@ -36,7 +36,7 @@ tidyverse 패키지를 사용하면 data.frame 대신 사용하게되는 tibble.
 
 ## All about tibble
 
--   `as.tibble`
+### as.tibble
 
 아이리스(붓꽃) 데이터가 담겨있는 iris 데이터를 가지고 살펴보아요. 총 150개의 로(row)와 5개의 칼럼(column)으로 이뤄진 데이터프레임(data.frame)이여요. 만일 코드에 그냥 iris라고 입력한다면 콘솔창에는 150개의 행을 보실 수 있을텐데요. 그걸 막기 위해 iris 데이터의 머릿부분만 불러오라는 함수 head( )를 써보았어요.
 
@@ -77,7 +77,7 @@ tbl_iris
 
 <br/>
 
--   `tibble`
+### tibble
 
 본격적으로 tibble을 만들어보아요. tibble( )을 이용하면 후딱 tibble을 생성할 수 있답니다. tibble( ) 함수는 data.frame( ) 함수와는 다르게 변수의 이름을 바꾸지 않아요. 예를 들어볼게요. **닭 대가리**라는 칼럼에 숫자 1을 넣은 data.frame을 만들어볼거에요. 동일하게 tibble로도 만들어보고요.
 
@@ -120,7 +120,7 @@ tb
 
 <br/>
 
--   `tribble`
+### tribble
 
 ![](tribble.gif){width="40%"}
 
@@ -146,3 +146,49 @@ tribble(
 )
 
 ```
+<br/>
+
+### tibble_row
+
+tibble을 만들 수 있는 또 다른 방법. tibble_row( )가 있어요. 기본적으로 data.frame과 tibble은 벡터들의 모음이여요. 여기서 잠깐, 벡터는 동일한 유형의 데이터가 여러개 묶여있는 형식을 뜻해요. 수치형 벡터도 있을 테고, 문자형 벡터도 있을 거고요, 논리형 벡터도 존재해요. 함수 등과 같이 특별한 타입의 데이터들은 벡터가 아니여요. class를 가지고 있는 일부 요소들은 벡터이기도 하고 아닌 녀석도 있지요. (벡터는 깊이 들어가면 복잡해질 수 있으니 tibble package에서는 요정도만 다루어보아요.)
+
+tibble_row 이야기를 하는데 갑자기 벡터 이야기를 해서 뜬금없다고 생각할 수 있지만 다 이유가 있답니다. 기존 함수들로는 벡터가 아닌 데이터(스칼라)를 tibble 안에 담을 수 없었어요. 하지만 tibble_row 함수와 함께라면 스칼라도 tibble 안에 넣을 수 있어지. tibble_row 함수는 한 행(row)을 차지하는 데이터프레임을 구성해주어요. 즉 한 열에 크기가 1인 녀석만 들어갈 수 있지만 그 대신 스칼라 데이터도 넣을 수 있게 된 거지요. 참고로 저장되는 스칼라는 list 형태로 포장되어요.
+
+``` {.r}
+# vector가 아닌 scalar 데이터를 만들어보아요
+# lm(linear model)과 time 데이터를 써 볼게요
+
+model <- lm(y ~ x, data.frame(x = 1:5, y = 3:7), model = FALSE)
+time <- Sys.time()
+
+tibble(model)
+
+# 에러: All columns in a tibble must be vectors.
+# x Column `model` is a `lm` object.
+
+tibble(time)
+
+#  A tibble: 1 x 1
+#  time               
+#  <dttm>             
+# 1 2021-05-06 23:41:31
+```
+
+model의 경우 vector가 아니여서 tibble에 담기지 않아요. 반면 time 데이터는 들어가네요. 하지만 tibble_row 함수가 출동한다면 어떨까요. 티-블-로. tibble_row와 함께라면 vector와 scalar 상관없이 tibble에 담을 수 있어요.
+
+
+``` {.r}
+tibble_row(model)
+
+#  A tibble: 1 x 1
+#  model 
+#  <list>
+# 1 <lm>  
+
+tibble_row(time)
+#  A tibble: 1 x 1
+#  time               
+#  <dttm>             
+# 1 2021-05-06 23:41:31
+```
+
