@@ -1600,7 +1600,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p><br/></p>
 <h3 id="tibble_row">tibble_row</h3>
 <p>tibble을 만들 수 있는 또 다른 방법. tibble_row( )가 있어요. 기본적으로 data.frame과 tibble은 벡터들의 모음이여요. 여기서 잠깐, 벡터는 동일한 유형의 데이터가 여러개 묶여있는 형식을 뜻해요. 수치형 벡터도 있을 테고, 문자형 벡터도 있을 거고요, 논리형 벡터도 존재해요. 함수 등과 같이 특별한 타입의 데이터들은 벡터가 아니여요. class를 가지고 있는 일부 요소들은 벡터이기도 하고 아닌 녀석도 있지요. (벡터는 깊이 들어가면 복잡해질 수 있으니 tibble package에서는 요정도만 다루어보아요.)</p>
-<p>tibble_row 이야기를 하는데 갑자기 벡터 이야기를 해서 뜬금없다고 생각할 수 있지만 다 이유가 있답니다. 기존 함수들로는 벡터가 아닌 데이터(스칼라)를 tibble 안에 담을 수 없었어요. 하지만 tibble_row 함수와 함께라면 스칼라도 tibble 안에 넣을 수 있어지. tibble_row 함수는 한 행(row)을 차지하는 데이터프레임을 구성해주어요. 즉 한 열에 크기가 1인 녀석만 들어갈 수 있지만 그 대신 스칼라 데이터도 넣을 수 있게 된 거지요. 참고로 저장되는 스칼라는 list 형태로 포장되어요.</p>
+<p>tibble_row 이야기를 하는데 갑자기 벡터 이야기를 해서 뜬금없다고 생각할 수 있지만 다 이유가 있답니다. 기존 함수들로는 벡터가 아닌 데이터(스칼라)를 tibble 안에 담을 수 없었어요. 하지만 tibble_row 함수와 함께라면 스칼라도 tibble 안에 넣을 수 있게 되지요. tibble_row 함수는 한 행(row)을 차지하는 데이터프레임을 구성해주어요. 즉 한 열에 크기가 1인 녀석만 들어갈 수 있지만 그 대신 스칼라 데이터도 넣을 수 있게 된 거지요. 참고로 저장되는 스칼라는 list 형태로 포장되어요.</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># vector가 아닌 scalar 데이터를 만들어보아요</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># lm(linear model)과 time 데이터를 써 볼게요</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
