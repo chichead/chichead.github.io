@@ -14,6 +14,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap');
 
+body {
+  background-color: #FFFFFF;
+}
+
 html {
   /*-- Main font sizes --*/
   --title-size:      50px;
@@ -22,8 +26,8 @@ html {
   --aside-size:      12px;
   --fig-cap-size:    13px;
   /*-- Main font colors --*/
-  --title-color:     #439A32;
-  --header-color:    #439A32;                    /* edited */
+  --title-color:     #F95700;
+  --header-color:    #F95700;                    /* edited */
   --body-color:      #404040;                    /* edited */
   --aside-color:     rgba(0, 0, 0, 0.6);
   --fig-cap-color:   rgba(0, 0, 0, 0.6);
@@ -32,6 +36,8 @@ html {
   --mono-font:       "IBM Plex Mono", monospace; /* edited */
   --body-font:       'Noto Sans KR', sans-serif; /* edited */
   --navbar-font:     'Noto Sans KR', sans-serif; /* edited */
+
+  --background:      #FCF6F5;
 }
 
 /*-- ARTICLE METADATA --*/
@@ -72,7 +78,7 @@ d-appendix {
   --text-color:       #7e7b88;                   /* edited */
   --text-size:        15px;
   --hover-color:      white;
-  --bkgd-color:       #439A323d;                 /* edited */
+  --bkgd-color:       #F95700;                 /* edited */
 }
 
 /*-- Additional custom styles --*/
