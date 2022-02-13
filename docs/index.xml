@@ -7,7 +7,7 @@
     <description>My Blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 01 May 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 02 May 2021 00:00:00 +0000</lastBuildDate>
     <item>
       <title>tibble package</title>
       <dc:creator>chichead</dc:creator>
@@ -15,7 +15,7 @@
       <description>R아두면 쓸데있는 패키지 이야기 : 데이터 테이블의 진화</description>
       <category>R_package</category>
       <guid>https://chic-head.com/posts/tibble_package</guid>
-      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Welcome to My Blog</title>
