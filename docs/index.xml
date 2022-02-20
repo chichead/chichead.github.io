@@ -7,7 +7,17 @@
     <description>My Blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sun, 02 May 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>ggbump package</title>
+      <dc:creator>chichead</dc:creator>
+      <link>https://chic-head.com/posts/ggbump_package</link>
+      <description>R아두면 쓸데있는 패키지 이야기 : bump chart를 그리고 싶을 땐</description>
+      <category>R_package</category>
+      <guid>https://chic-head.com/posts/ggbump_package</guid>
+      <pubDate>Sat, 12 Feb 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://chic-head.com/posts/ggbump_package/ggbump_files/figure-html5/unnamed-chunk-1-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>tibble package</title>
       <dc:creator>chichead</dc:creator>

@@ -20,15 +20,15 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## tibble package
 
-![](tibble_logo.png){width="30%"}
+![](tibble_logo.png){width="25%"}
 
 tidyverse 패키지를 사용하면 data.frame 대신 사용하게되는 tibble. 오늘 알아볼 R package는 tibble입니다. tibble 패키지의 역사부터 기존의 data.frame과는 어떻게 다른지 정리해봅니다.
 
-### Tibble's Name
+### tibble's name
 
 2014년 1월, dplyr 패키지에선 data.frame을 tbl_df이라는 서브클래스로 사용했습니다. 이전의 data.frame과 다르게 출력된 결과가 콘솔창을 다 뒤덮지도 않고 칼럼명 아래에 자료형을 표현해주는 강점이 있었죠. 이 tbl_df가 지금의 tibble 패키지의 시초입니다. tbl_df를 [티블-디프]로 읽다가 뒤에 df는 떨어져나가고 tbl남 남아 결국엔 tibble이 되었죠. 참고로 패키지를 만든 [해들리 위컴](https://github.com/hadley)은 뉴질랜드 사람인데, 뉴질랜드인들이 table을 tibble이라고 발음한다고 합니다.
 
-### Tibble's Logo
+### tibble's logo
 
 위대한 패키지 tidyverse의 일원인만큼 tibble 로고의 뒷 배경은 tidyverse 세계관을 공유하고 있습니다. 우주 배경을 뒤에 두고 표가 그려져있죠. 그 위엔 TIBBLE 이라는 이름표가 적혀있고요. 폰트 스타일은 스타트랙을 닮았는데, 스타트랙에는 tibble과 유사한 tribble이라는 크리쳐가 등장합니다. tribble은 tibble 패키지의 함수로도 등장하는데 이건 뒤에서 설명 드리겠습니다. tibble 이름표를 잘 보면 TI33으로도 읽을 수 있는데 공학용 계산기로 유명한 텍사스 인스트루먼트(TI)에서 만든 동명의 모델이 있죠. (물론 의도한지는 모르겠지만요)
 
@@ -124,7 +124,7 @@ tb
 
 ![](tribble.gif){width="40%"}
 
-tibble을 만들 수 있는 또다른 방법은 함수 tribble을 사용하는겁니다요. 스타 트렉의 커크 함장에게 눈처럼 내리는 동물이 바로 트리블이랍니다. 트리블은 복실복실한 털과 귀여운 목소리 탓에 애완용으로 많이 키워졌는데 다만 한가지 주의해야할 부분은 바로 번식이랍니다. 한 번 번식을 시작하면 끝도 없이 증식해버려서 자칫하면 손을 쓸 수 없을지도 몰라요.
+tibble을 만들 수 있는 또다른 방법은 함수 tribble을 사용하는겁니다. 스타 트렉의 커크 함장에게 눈처럼 내리는 동물이 바로 트리블이랍니다. 트리블은 복실복실한 털과 귀여운 목소리 탓에 애완용으로 많이 키워졌는데 다만 한가지 주의해야할 부분은 바로 번식이랍니다. 한 번 번식을 시작하면 끝도 없이 증식해버려서 자칫하면 손을 쓸 수 없을지도 몰라요.
 
 tibble 패키지에 있는 tribble은 **tr**ansposed t**ibble**의 줄임말입니다. 단어 그대로 전치된 티블이라는 뜻이지요. 기존의 tibble 입력 형식이 colname = data 같은 가로형이었다면 tribble에서는 세로형으로 입력할 수 있지요. 간단하게 적은 양의 데이터를 코드로 입력할 때에는 tribble을 쓰면 편리합니다.
 
