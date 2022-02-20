@@ -6,7 +6,8 @@ author:
   - name: chichead
 categories:
   - R_package
-date: 05-02-2021
+date: 2021-05-02
+preview: https://i.gifer.com/PFYe.gif
 output:
   distill::distill_article:
     self_contained: false

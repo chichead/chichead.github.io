@@ -6,6 +6,7 @@ author:
   - name: chichead
 categories:
   - R_package
+preview: https://raw.githubusercontent.com/chichead/chichead.github.io/master/_posts/ggbump_package/zissou.gif
 date: 2022-02-20
 output:
   distill::distill_article:
