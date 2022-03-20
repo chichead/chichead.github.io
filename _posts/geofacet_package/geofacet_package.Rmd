@@ -6,6 +6,7 @@ author:
   - name: chichead
 categories:
   - Visualization
+preview: https://raw.githubusercontent.com/chichead/chichead.github.io/master/_posts/geofacet_package/map.webp
 date: 2022-03-20
 output:
   distill::distill_article:
@@ -59,7 +60,7 @@ geofacet::grid_preview(mygrid)
 
 ### 선거 데이터 만들기
 
-이제 여기에 해야할 것은 각각의 시군구에 그래프를 넣어보는 겁니다. 이번 대통령 선거 득표 정보를 바탕으로 그래프를 넣어보려고 해요. 선관위 개표 데이터를 정리해서 다음과 같은 데이터(PE_20)를 만들어 봤습니다. PE_20 데이터는 [여기에서](https://github.com/hafen/geofacet/issues/358) 다운받을 수 있습니다.
+이제 여기에 해야할 것은 각각의 시군구에 그래프를 넣어보는 겁니다. 이번 대통령 선거 득표 정보를 바탕으로 그래프를 넣어보려고 해요. 선관위 개표 데이터를 정리해서 다음과 같은 데이터(PE_20)를 만들어 봤습니다. PE_20 데이터는 [여기에서](https://github.com/chichead/chichead.github.io/blob/master/_posts/geofacet_package/Presidential_Election_2022.xlsx) 다운받을 수 있습니다.
 
 ``` r
 head(PE_20)

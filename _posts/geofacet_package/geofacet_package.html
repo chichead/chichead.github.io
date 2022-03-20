@@ -112,7 +112,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","categories","date","output"]}},"value":[{"type":"character","attributes":{},"value":["시군구별 득표율 지도 with R"]},{"type":"character","attributes":{},"value":["geofacet package + ggplot package \n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["chichead"]}]}]},{"type":"character","attributes":{},"value":["Visualization"]},{"type":"character","attributes":{},"value":["2022-03-20"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","categories","preview","date","output"]}},"value":[{"type":"character","attributes":{},"value":["시군구별 득표율 지도 with R"]},{"type":"character","attributes":{},"value":["geofacet package + ggplot package \n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["chichead"]}]}]},{"type":"character","attributes":{},"value":["Visualization"]},{"type":"character","attributes":{},"value":["https://raw.githubusercontent.com/chichead/chichead.github.io/master/_posts/geofacet_package/map.webp"]},{"type":"character","attributes":{},"value":["2022-03-20"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1536,7 +1536,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p><br/></p>
 <h2 id="geo_grid-ggplot">geo_grid + ggplot</h2>
 <h3 id="선거-데이터-만들기">선거 데이터 만들기</h3>
-<p>이제 여기에 해야할 것은 각각의 시군구에 그래프를 넣어보는 겁니다. 이번 대통령 선거 득표 정보를 바탕으로 그래프를 넣어보려고 해요. 선관위 개표 데이터를 정리해서 다음과 같은 데이터(PE_20)를 만들어 봤습니다. PE_20 데이터는 <a href="https://github.com/hafen/geofacet/issues/358">여기에서</a> 다운받을 수 있습니다.</p>
+<p>이제 여기에 해야할 것은 각각의 시군구에 그래프를 넣어보는 겁니다. 이번 대통령 선거 득표 정보를 바탕으로 그래프를 넣어보려고 해요. 선관위 개표 데이터를 정리해서 다음과 같은 데이터(PE_20)를 만들어 봤습니다. PE_20 데이터는 <a href="https://github.com/chichead/chichead.github.io/blob/master/_posts/geofacet_package/Presidential_Election_2022.xlsx">여기에서</a> 다운받을 수 있습니다.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(PE_20)</span></code></pre></div>
 <div class="layout-chunk" data-layout="l-body">
 <pre><code># A tibble: 6 × 21
@@ -1655,7 +1655,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="geofacet_package_files/figure-html5/unnamed-chunk-7-1.png" width="672" /></p>
 </div>
-<p>짜잔! 이러면 우리가 원했던 250개 시군구 그리드에 각각의 후보별 득표율을 그릴수 있게 되었습니다. 굳이 권역구분을 하지 않더라도 득표율 편차가 확연하게 드러나는군요.</p>
+<p>짜잔! 이러면 우리가 원했던 250개 시군구 그리드에 각각의 후보별 득표율을 그릴수 있게 되었습니다.</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

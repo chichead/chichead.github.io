@@ -16,7 +16,7 @@
       <category>Visualization</category>
       <guid>https://chic-head.com/posts/geofacet_package</guid>
       <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
-      <media:content url="https://chic-head.com/posts/geofacet_package/nyt_vote_graph.webp" medium="image" type="application/octet-stream"/>
+      <media:content url="https://raw.githubusercontent.com/chichead/chichead.github.io/master/_posts/geofacet_package/map.webp" medium="image" type="application/octet-stream"/>
     </item>
     <item>
       <title>ggbump package</title>
