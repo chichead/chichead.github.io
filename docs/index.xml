@@ -9,7 +9,7 @@
     <generator>Distill</generator>
     <lastBuildDate>Sat, 19 Mar 2022 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>시군구별 득표율 지도 with R</title>
+      <title> 득표율 지도 with R</title>
       <dc:creator>chichead</dc:creator>
       <link>https://chic-head.com/posts/geofacet_package</link>
       <description>geofacet package + ggplot package</description>
