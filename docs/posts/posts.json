@@ -1,7 +1,7 @@
 [
   {
     "path": "posts/geofacet_package/",
-    "title": "시군구별 득표율 지도 with R",
+    "title": " 득표율 지도 with R",
     "description": "geofacet package + ggplot package",
     "author": [
       {
