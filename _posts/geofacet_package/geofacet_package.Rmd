@@ -1,5 +1,5 @@
 ---
-title: "시군구별 득표율 지도 with R"
+title: "대선 득표율 지도 with R"
 description: |
   geofacet package + ggplot package 
 author:
@@ -234,9 +234,9 @@ mabunews_style <- function() {
   )
 }
 
-PE_20_final$후보 <- factor(PE_20_final$후보, levels = c("심상정R", "윤석열R", "이재명R"))
+PE_20_final2$후보 <- factor(PE_20_final2$후보, levels = c("심상정R", "윤석열R", "이재명R"))
 
-data_11110 <- PE_20_final %>% filter(code == 11110)
+data_11110 <- PE_20_final2 %>% filter(code == 11110)
 
 ggplot(data_11110, aes(x = 후보, y = 득표율, fill = 후보)) +
   geom_col() +
