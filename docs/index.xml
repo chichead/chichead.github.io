@@ -9,6 +9,7 @@
     <generator>Distill</generator>
     <lastBuildDate>Sat, 26 Mar 2022 00:00:00 +0000</lastBuildDate>
     <item>
+<<<<<<< HEAD
       <title>palmerpenguins package</title>
       <dc:creator>chichead</dc:creator>
       <link>https://chic-head.com/posts/palmerpenguins_package</link>
@@ -19,6 +20,8 @@
       <media:content url="https://i.pinimg.com/originals/d0/86/53/d086534c715fec748855059b6d0ad1f1.gif" medium="image" type="image/gif"/>
     </item>
     <item>
+=======
+>>>>>>> 16c1c7eb5c5b8a64ca4bcef11df0e464a5b379d2
       <title>대선 득표율 지도 with R</title>
       <dc:creator>chichead</dc:creator>
       <link>https://chic-head.com/posts/geofacet_package</link>
