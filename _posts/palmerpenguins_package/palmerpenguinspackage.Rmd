@@ -1,7 +1,7 @@
 ---
-title: "palmerpenguins package"
+title: "iris 대신 귀여운 penguins 씁시다"
 description: |
- R아두면 쓸데있는 패키지 이야기 : iris 대신 귀여운 penguins 씁시다
+ R아두면 쓸데있는 패키지 이야기 : palmerpenguins package
 author:
   - name: chichead
 categories:

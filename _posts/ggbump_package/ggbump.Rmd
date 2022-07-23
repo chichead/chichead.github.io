@@ -1,7 +1,7 @@
 ---
-title: "ggbump package"
+title: "bump chart를 그리고 싶을 땐 ggbump"
 description: |
- R아두면 쓸데있는 패키지 이야기 : bump chart를 그리고 싶을 땐
+ R아두면 쓸데있는 패키지 이야기 : ggbump package
 author:
   - name: chichead
 categories:
