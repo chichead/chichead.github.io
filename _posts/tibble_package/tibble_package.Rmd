@@ -41,7 +41,7 @@ tidyverse 패키지를 사용하면 data.frame 대신 사용하게되는 tibble.
 
 아이리스(붓꽃) 데이터가 담겨있는 iris 데이터를 가지고 살펴보겠습니다. 총 150개의 로(row)와 5개의 칼럼(column)으로 이뤄진 데이터프레임(data.frame)입니다. 만일 코드에 그냥 iris라고 입력한다면 콘솔창에는 150개의 행을 보실 수 있을텐데요. 그걸 막기 위해 iris 데이터의 머릿부분만 불러오라는 함수 head( )를 써보았어요.
 
-``` {.r}
+``` r
 head(iris)
 ```
 
@@ -51,7 +51,7 @@ head(iris)
 
 이번엔 tibble 패키지를 이용해볼까요. 여기서 사용할 함수는 as_tibble( )입니다. 무언가를 tibble로 만들어주는 고마운 함수입니다. 새로운 iris tibble 녀석을 tbl_iris에 할당했습니다. 그리고 불러와봅시다. tibble은 그냥 tbl_iris라고 입력해도 콘솔창을 다 뒤덮지않는군요. 10개의 행을 보여주고는 나머지 140개가 남아있다고 깨알같이 설명해줍니다. 게다가 5개의 칼럼이 어떤 녀석인지 밑에다가 자료형을 설명해주고 있군요. 착한 녀석이죠. 혹여나 이러한 편의를 무시하고 모든 행을 다 보고 싶은 경우에는 옵션을 통해 바꿔줄 수 있습니다.
 
-``` {.r}
+``` r
 library(tibble)
 
 # as_tibble(sth) : sth을 tibble로 만들어주세요
@@ -65,7 +65,7 @@ tbl_iris <- as_tibble(iris)
 tbl_iris
 ```
 
-``` {.r}
+``` r
 # 행이 n개를 넘어가면 m개만 출력해줘
 # options(tibble.print_max = n, tibble.print_min = m)
 
@@ -82,7 +82,7 @@ tbl_iris
 
 본격적으로 tibble을 만들어봅니다. tibble( )을 이용하면 후딱 tibble을 생성할 수 있답니다. tibble( ) 함수는 data.frame( ) 함수와는 다르게 변수의 이름을 바꾸지 않아요. 예를 들어볼게요. **닭 대가리**라는 칼럼에 숫자 1을 넣은 data.frame을 만들어볼거에요. 동일하게 tibble로도 만들어보고요.
 
-``` {.r}
+``` r
 # 닭 대가리라는 칼럼을 가진 데이터를 만들어봅니다
 data.frame(`닭 대가리` = 1)
 tibble(`닭 대가리` = 1)
@@ -98,7 +98,7 @@ tibble(`닭 대가리` = 1)
 
 칼럼 이름에 공백이 들어가게 되면 data.frame은 공백을 온점으로 바꿔줍니다. **닭 대가리** 대신 **닭.대가리**가 되었죠? 반면 tibble은 변수의 이름을 바꾸지 않고 그대로 내비두죠. 이러한 tibble의 유연함은 공백말고 다른 비정상적인 문자도 칼럼 이름에 넣을 수 있게했어요.
 
-``` {.r}
+``` r
 # tibble은 비정상적 문자도 칼럼명에 넣을 수 있답니다
 # 아 물론 백틱(`)으로 묶어주어야해요!
 tb <- tibble(
@@ -129,7 +129,7 @@ tibble을 만들 수 있는 또다른 방법은 함수 tribble을 사용하는�
 
 tibble 패키지에 있는 tribble은 **tr**ansposed t**ibble**의 줄임말입니다. 단어 그대로 전치된 티블이라는 뜻이지요. 기존의 tibble 입력 형식이 colname = data 같은 가로형이었다면 tribble에서는 세로형으로 입력할 수 있지요. 간단하게 적은 양의 데이터를 코드로 입력할 때에는 tribble을 쓰면 편리합니다.
 
-``` {.r}
+``` r
 # tribble 함수에서 칼럼명은 ~로 시작해주셔야해요
 # 데이터 구분은 ,로 해주시고요
 tribble(
@@ -147,6 +147,7 @@ tribble(
 )
 
 ```
+
 <br/>
 
 ### tibble_row
@@ -155,7 +156,7 @@ tibble을 만들 수 있는 또 다른 방법. tibble_row( )가 있어요. 기�
 
 tibble_row 이야기를 하는데 갑자기 벡터 이야기를 해서 뜬금없다고 생각할 수 있지만 다 이유가 있답니다. 기존 함수들로는 벡터가 아닌 데이터(스칼라)를 tibble 안에 담을 수 없었어요. 하지만 tibble_row 함수와 함께라면 스칼라도 tibble 안에 넣을 수 있게 되죠. tibble_row 함수는 한 행(row)을 차지하는 데이터프레임을 구성해줍니다. 즉 한 열에 크기가 1인 녀석만 들어갈 수 있지만 그 대신 스칼라 데이터도 넣을 수 있게 된 거죠. 참고로 저장되는 스칼라는 list 형태로 포장됩니다.
 
-``` {.r}
+``` r
 # vector가 아닌 scalar 데이터를 만들어봅니다
 # lm(linear model)과 time 데이터를 써 볼게요
 
@@ -177,8 +178,7 @@ tibble(time)
 
 model의 경우 vector가 아니여서 tibble에 담기지 않아요. 반면 time 데이터는 들어가네요. 하지만 tibble_row 함수가 출동한다면 어떨까요. tibble_row와 함께라면 vector와 scalar 상관없이 tibble에 담을 수 있어요.
 
-
-``` {.r}
+``` r
 tibble_row(model)
 
 #  A tibble: 1 x 1
@@ -192,4 +192,3 @@ tibble_row(time)
 #  <dttm>             
 # 1 2021-05-06 23:41:31
 ```
-
